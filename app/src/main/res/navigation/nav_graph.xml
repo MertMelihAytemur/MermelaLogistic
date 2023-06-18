@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mermelalogistic.ui.feature.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_customerHomeFragment"
+            app:destination="@id/customerHomeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_loginFragment_to_manufacturerHomeFragment"
+            app:destination="@id/manufacturerHomeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerHomeFragment"
+        android:name="com.example.mermelalogistic.ui.feature.home.customer.CustomerHomeFragment"
+        android:label="fragment_customer_home"
+        tools:layout="@layout/fragment_customer_home" >
+        <action
+            android:id="@+id/action_customerHomeFragment_to_manufacturersListFragment"
+            app:destination="@id/manufacturersListFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/manufacturerHomeFragment"
+        android:name="com.example.mermelalogistic.ui.feature.home.manufacturer.ManufacturerHomeFragment"
+        android:label="fragment_manufacturer_home"
+        tools:layout="@layout/fragment_manufacturer_home" />
+    <fragment
+        android:id="@+id/manufacturersListFragment"
+        android:name="com.example.mermelalogistic.ui.feature.home.customer.manufacturers.ManufacturersListFragment"
+        android:label="fragment_manufacturers_list"
+        tools:layout="@layout/fragment_manufacturers_list" >
+        <action
+            android:id="@+id/action_manufacturersListFragment_to_manufacturerWarehouseDetailFragment"
+            app:destination="@id/manufacturerWarehouseDetailFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/manufacturerWarehouseDetailFragment"
+        android:name="com.example.mermelalogistic.ui.feature.home.customer.manufacturers.detail.ManufacturerWarehouseDetailFragment"
+        android:label="fragment_manufacturer_warehouse_detail"
+        tools:layout="@layout/fragment_manufacturer_warehouse_detail" >
+        <argument
+            android:name="factoryId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_manufacturerWarehouseDetailFragment_to_customerHomeFragment"
+            app:destination="@id/customerHomeFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/manufacturerWarehouseDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

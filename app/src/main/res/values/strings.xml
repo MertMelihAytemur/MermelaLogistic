@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MermelaLogistic</string>
+    <string name="log_in">Log In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="general_error"><![CDATA[<string name=\"general_error\">An error occurred, please try again later.</string>]]></string>
+    <string name="manufacturers">Üretici Firmalar</string>
+    <string name="manufacturer_warehouse_detail">Üretici Depo Bilgileri</string>
+    <string name="tlv_default_font">sans-serif</string>
+</resources>
