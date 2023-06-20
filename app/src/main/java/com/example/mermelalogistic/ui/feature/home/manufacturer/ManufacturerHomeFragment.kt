@@ -152,7 +152,9 @@ class ManufacturerHomeFragment :
     private fun onRequestClickAction(productRequestUiModel: ProductRequestUiModel) {
         readRequestDialog!!.dismiss()
 
-        val view: View = layoutInflater.inflate(R.layout.dialog_add_product, null)
+
+        viewModel.navigateToOrderConfirm()
+        /*val view: View = layoutInflater.inflate(R.layout.dialog_add_product, null)
         addProductDialog = BottomSheetDialog(requireContext())
         addProductDialog!!.setContentView(view)
         addProductDialog!!.show()
@@ -178,6 +180,6 @@ class ManufacturerHomeFragment :
             }.onFailure {
                 toast("Lütfen girilen bilgileri kontrol ediniz.")
             }
-        }
+        }*/
     }
 }

@@ -38,12 +38,19 @@
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_customerHomeFragment_to_customerRequestFragment"
+            app:destination="@id/customerRequestFragment" />
     </fragment>
     <fragment
         android:id="@+id/manufacturerHomeFragment"
         android:name="com.example.mermelalogistic.ui.feature.home.manufacturer.ManufacturerHomeFragment"
         android:label="fragment_manufacturer_home"
-        tools:layout="@layout/fragment_manufacturer_home" />
+        tools:layout="@layout/fragment_manufacturer_home" >
+        <action
+            android:id="@+id/action_manufacturerHomeFragment_to_confirmRequestFragment"
+            app:destination="@id/confirmRequestFragment" />
+    </fragment>
     <fragment
         android:id="@+id/manufacturersListFragment"
         android:name="com.example.mermelalogistic.ui.feature.home.customer.manufacturers.ManufacturersListFragment"
@@ -75,4 +82,14 @@
             app:popUpTo="@id/manufacturerWarehouseDetailFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/confirmRequestFragment"
+        android:name="com.example.mermelalogistic.ui.feature.home.manufacturer.confirmrequest.ConfirmRequestFragment"
+        android:label="fragment_confirm_request"
+        tools:layout="@layout/fragment_confirm_request" />
+    <fragment
+        android:id="@+id/customerRequestFragment"
+        android:name="com.example.mermelalogistic.ui.feature.home.customer.requests.CustomerRequestFragment"
+        android:label="fragment_customer_request"
+        tools:layout="@layout/fragment_customer_request" />
 </navigation>

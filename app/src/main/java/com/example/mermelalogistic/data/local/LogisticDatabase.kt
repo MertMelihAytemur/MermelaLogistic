@@ -12,7 +12,7 @@ import com.example.mermelalogistic.data.local.entities.*
         Request::class,
         Stock::class,
         Warehouse::class],
-    version = 13,
+    version = 14,
     exportSchema = false
 )
 @TypeConverters(DateConverter::class)

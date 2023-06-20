@@ -134,4 +134,10 @@ class ManufacturerHomeViewModel @Inject constructor(
             }
         }
     }
+
+    fun navigateToOrderConfirm(){
+        val action =
+            ManufacturerHomeFragmentDirections.actionManufacturerHomeFragmentToConfirmRequestFragment()
+        navigate(action)
+    }
 }

@@ -72,4 +72,10 @@ class CustomerHomeViewModel @Inject constructor(
             CustomerHomeFragmentDirections.actionCustomerHomeFragmentToManufacturersListFragment()
         navigate(action)
     }
+
+    fun navigateToCustomerRequests(){
+        val action =
+            CustomerHomeFragmentDirections.actionCustomerHomeFragmentToCustomerRequestFragment()
+        navigate(action)
+    }
 }

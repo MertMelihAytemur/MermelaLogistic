@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.feature.home.customer.requests.CustomerRequestFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.mermelalogistic.core.ui.timelineview.TimelineView
+        android:id="@+id/timelineViewShipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_margin="14dp"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tlv_borderWidth="3dp"
+        app:tlv_dotSize="20dp"
+        app:tlv_lineWidth="50dp"
+        app:tlv_orientation="horizontal"
+        app:tlv_textSize="10sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tInputProductName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="30dp"
+        android:hint="Ürün Adı"
+        android:clickable="false"
+        app:boxStrokeColor="#4E4A4A"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#4E4A4A"
+        app:layout_constraintEnd_toEndOf="@id/tInputProductAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timelineViewShipment"
+        app:shapeAppearanceOverlay="@style/Button4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Şaft"
+            android:clickable="false"
+            android:inputType="textPersonName|textEmailAddress"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tInputProductAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:hint="Ürün Miktarı"
+        android:clickable="false"
+        android:layout_marginStart="30dp"
+        app:boxStrokeColor="#4E4A4A"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#4E4A4A"
+        app:layout_constraintEnd_toEndOf="@id/tInputCargoWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tInputProductName"
+        app:layout_goneMarginTop="12dp"
+        app:shapeAppearanceOverlay="@style/Button4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProductAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="8000"
+            android:clickable="false"
+            android:inputType="textPersonName|textEmailAddress"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tInputCargoVolume"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Kargo Hacmi"
+        android:clickable="false"
+        app:boxStrokeColor="#4E4A4A"
+        app:boxStrokeWidth="1dp"
+        android:layout_marginStart="30dp"
+        app:hintTextColor="#4E4A4A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tInputProductAmount"
+        app:layout_goneMarginTop="12dp"
+        app:shapeAppearanceOverlay="@style/Button4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCargoVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="1000 m2"
+            android:clickable="false"
+            android:inputType="numberDecimal"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tInputCargoWeight"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:hint="Kargo Ağrılık"
+        android:clickable="false"
+        android:layout_marginStart="20dp"
+        app:boxStrokeColor="#4E4A4A"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#4E4A4A"
+        app:layout_constraintStart_toEndOf="@id/tInputCargoVolume"
+        app:layout_constraintTop_toBottomOf="@id/tInputProductAmount"
+        app:layout_goneMarginTop="12dp"
+        app:shapeAppearanceOverlay="@style/Button4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCargoWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="2 ton"
+            android:clickable="false"
+            android:inputType="numberDecimal"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tahmini Varış"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tInputCargoVolume"
+        app:layout_constraintStart_toStartOf="@id/tInputCargoVolume"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/llEstimatedDepDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_rectangle_card_view_background"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tInputCargoVolume">
+
+        <TextView
+            android:id="@+id/tvEstDepDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="20 Haziran - Pazartesi"
+            android:textColor="@color/text_black_main_opac_60" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_calendar" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="15dp"
+        android:layout_marginHorizontal="12dp"
+        android:gravity="center"
+        android:text="Siparişi İptal Et"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="17sp"
+        app:backgroundTint="@color/pinkColor"
+        app:layout_constraintTop_toBottomOf="@id/llEstimatedDepDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintVertical_bias="0.132"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destek ekibine bağlan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:drawableStart="@drawable/ic_call"
+        android:textColor="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

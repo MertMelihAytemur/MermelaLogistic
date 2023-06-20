@@ -24,9 +24,12 @@ class CustomerHomeFragment : BaseFragment<FragmentCustomerHomeBinding,CustomerHo
     }
 
     override fun initListeners() {
-
         binding.btnWarehouses.setOnClickListener {
             viewModel.navigateToManufacturersInfoFragment()
+        }
+
+        binding.btnRequests.setOnClickListener {
+            viewModel.navigateToCustomerRequests()
         }
     }
 

@@ -12,4 +12,9 @@
     <color name="tansparentColor">#00FFFFFF</color>
     <color name="gray_soft_f8">#F8F8F8</color>
     <color name="satin_linen">#E8E5DC</color>
+
+    <color name="purple_main">#275CE6</color>
+    <color name="purple_soft">#BEC7EA</color>
+    <color name="text_black_main_opac_60">#66181b11</color>
+    <color name="text_black_main_opac_25">#40181b11</color>
 </resources>

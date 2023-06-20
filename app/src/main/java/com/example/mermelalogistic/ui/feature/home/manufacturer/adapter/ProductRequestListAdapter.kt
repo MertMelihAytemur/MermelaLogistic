@@ -22,7 +22,7 @@ class ProductRequestListAdapter(
             binding.tvProductAmount.text = itemPosition.productAmount.toString()
             binding.tvDate.text = itemPosition.requestDate.toString()
 
-            binding.cardView.setOnClickListener {
+            binding.btnConfirm.setOnClickListener {
                 onRequestClick(itemPosition)
             }
         }
